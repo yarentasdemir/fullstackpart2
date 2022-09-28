@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import JsxMapObjectArraySample from "./jsxSample/JsxMapObjectArraySample";
+import JsxStyle from "./jsxSample/JsxStyle";
+import Footer from "./templateSamples/template-1/Footer";
+import Header from "./templateSamples/template-1/Header";
+import Navbar from "./templateSamples/template-1/Navbar";
+import PageContent from "./templateSamples/template-1/PageContent";
+
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  return ( <>
+
+    <Navbar/>
+    <Header/>
+    <PageContent/>
+    <Footer/>
+
+
+
+   </>
+  
+    
+
   );
 }
 
+
+
 export default App;
+
+// export edilmezse kullanılamaz.
+//Export edilecek ki import edilebilsin.
+//Boş bi düğüm,kapsayıcı atanır içine yazılır.
+//  <>  </>  Bu düğüme fragment denir.
+// <Fragment> <Fragment/>
