@@ -1,35 +1,33 @@
-import JsxMapObjectArraySample from "./jsxSample/JsxMapObjectArraySample";
-import JsxStyle from "./jsxSample/JsxStyle";
-import Footer from "./templateSamples/template-1/Footer";
-import Header from "./templateSamples/template-1/Header";
-import Navbar from "./templateSamples/template-1/Navbar";
-import PageContent from "./templateSamples/template-1/PageContent";
-
-
-
-
+import ChildComp from "./propSample/ChildComp";
+import CityList from "./propSample/CityList";
+import ProductDetail from "./propSample/ProductDetail";
+import UserDetail from "./propSample/UserDetail";
 
 
 function App() {
 
-  return ( <>
-
-    <Navbar/>
-    <Header/>
-    <PageContent/>
-    <Footer/>
+  let citiesSource = [ 'İzmir', 'İstanbul' , 'Bakü', 'Paris' ];
 
 
+  const hello = () => {
+       alert ('Hello React Props');
+  }
 
+  return ( 
+  <>
+
+   {/* <UserDetail name='Yaren' surname='Taşdemir' age={24}></UserDetail>
+   <CityList cities={citiesSource}/>
+   <ChildComp merhaba={hello}/> */}
+   <ProductDetail name='ıphone' stock={10} status={false}/>
    </>
   
     
-
   );
 }
 
-
-
+ //String değerler yukarıda ki gibi yollanırken, string dışındakiler {} içerisinde yollanır.
+    // Sring olunca {} a gerek yok.
 export default App;
 
 // export edilmezse kullanılamaz.
