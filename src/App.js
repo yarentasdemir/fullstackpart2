@@ -5,25 +5,40 @@ import ProductDetail from "./propSample/ProductDetail";
 import UserDetail from "./propSample/UserDetail";
 import ArraySample from "./state/ArraySample";
 import CounterSample from "./state/CounterSample";
+import Footer from "./templateSamples/template-2-Odev/Footer";
+import Header from "./templateSamples/template-2-Odev/Header";
+import Navbar from "./templateSamples/template-2-Odev/Navbar";
+import PageContent from "./templateSamples/template-2-Odev/PageContent";
 
 
 function App() {
 
-  let citiesSource = [ 'İzmir', 'İstanbul' , 'Bakü', 'Paris' ];
+//   let citiesSource = [ 'İzmir', 'İstanbul' , 'Bakü', 'Paris' ];
 
 
-  const hello = () => {
-       alert ('Hello React Props');
-  }
+//   const hello = () => {
+//        alert ('Hello React Props');
+//   }
 
-  return ( 
-  <>
+  return ( <>
+<Navbar/>
+<Header/>
+<PageContent/>
+<Footer/>
 
-   {/* <UserDetail name='Yaren' surname='Taşdemir' age={24}></UserDetail>
-   <CityList cities={citiesSource}/>
-   <ChildComp merhaba={hello}/> */}
-<ArraySample/>
-   </>
+  
+  </>
+
+
+
+//   <>
+
+
+//    {/* <UserDetail name='Yaren' surname='Taşdemir' age={24}></UserDetail>
+//    <CityList cities={citiesSource}/>
+//    <ChildComp merhaba={hello}/> */}
+// {/* <ArraySample/> */}
+//    </>
   
     
   );
