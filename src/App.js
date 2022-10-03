@@ -6,6 +6,7 @@ import ChildSample from "./routerSample/ChildSample";
 import ContactPage from "./routerSample/ContactPage";
 import GuardSample from "./routerSample/GuardSample";
 import HomePage from "./routerSample/HomePage";
+import LocationSample from "./routerSample/LocationSample";
 import LoginPage from "./routerSample/LoginPage";
 
 
@@ -25,6 +26,7 @@ function App() {
       <li><Link to='/about'>About</Link></li>
       <li><Link to='/categories'>Category List</Link></li>
       <li><Link to='/guardsample'>Guard Sample</Link></li>
+      <li><Link to='/location'>Location Sample</Link></li>
     </ul>
 
 
@@ -41,7 +43,9 @@ function App() {
         </GuardSample>
       }>
         </Route> 
+        <Route path ="/location" element= {<LocationSample/>}></Route>
       
+
        </Routes>
        <h1>Site Footer</h1>
      </>
