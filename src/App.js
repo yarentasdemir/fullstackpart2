@@ -1,51 +1,49 @@
-import CategoryPage from "./propSample/CategoryPage";
-import ChildComp from "./propSample/ChildComp";
-import CityList from "./propSample/CityList";
-import ProductDetail from "./propSample/ProductDetail";
-import UserDetail from "./propSample/UserDetail";
-import ArraySample from "./state/ArraySample";
-import CounterSample from "./state/CounterSample";
-import Footer from "./templateSamples/template-2-Odev/Footer";
-import Header from "./templateSamples/template-2-Odev/Header";
-import Navbar from "./templateSamples/template-2-Odev/Navbar";
-import PageContent from "./templateSamples/template-2-Odev/PageContent";
+import { Link,Route, Routes } from "react-router-dom";
+import AboutPage from "./routerSample/AboutPage";
+import CategoryDetail from "./routerSample/CategoryDetail";
+import CategoryPage from "./routerSample/CategoryPage";
+import ContactPage from "./routerSample/ContactPage";
+import HomePage from "./routerSample/HomePage";
+
 
 
 function App() {
 
-//   let citiesSource = [ 'İzmir', 'İstanbul' , 'Bakü', 'Paris' ];
 
 
-//   const hello = () => {
-//        alert ('Hello React Props');
-//   }
+  return ( 
+     
+    <>
 
-  return ( <>
-<Navbar/>
-<Header/>
-<PageContent/>
-<Footer/>
+    <h1>Site Header</h1>
+    <ul>
+      <li><Link to='/'>Home</Link></li>
+      <li><Link to='/contact'>Contatc</Link></li>
+      <li><Link to='/about'>About</Link></li>
+      <li><Link to='/categories'>Category List</Link></li>
+    </ul>
+    <Routes>
+      <Route path ="/" element= {<HomePage/>}></Route>
+      <Route path ="/about" element= {<AboutPage/>}></Route>
+      <Route path ="/contact" element= {<ContactPage/>}></Route>
+      <Route path ="/categories" element= {<CategoryPage/>}></Route>
+      <Route path ="/categories/:id" element= {<CategoryDetail/>}></Route>
+      
+       </Routes>
+       <h1>Site Footer</h1>
+
+
 
   
   </>
 
-
-
-//   <>
-
-
-//    {/* <UserDetail name='Yaren' surname='Taşdemir' age={24}></UserDetail>
-//    <CityList cities={citiesSource}/>
-//    <ChildComp merhaba={hello}/> */}
-// {/* <ArraySample/> */}
-//    </>
   
     
   );
 }
 
- //String değerler yukarıda ki gibi yollanırken, string dışındakiler {} içerisinde yollanır.
-    // Sring olunca {} a gerek yok.
+  //String değerler yukarıda ki gibi yollanırken, string dışındakiler {} içerisinde yollanır.
+  // Sring olunca {} a gerek yok.
 export default App;
 
 // export edilmezse kullanılamaz.
@@ -53,3 +51,9 @@ export default App;
 //Boş bi düğüm,kapsayıcı atanır içine yazılır.
 //  <>  </>  Bu düğüme fragment denir.
 // <Fragment> <Fragment/>
+
+
+
+
+// / var ise; ana dizin demektir, path derse; element.
+
