@@ -6,7 +6,12 @@ import { ExclamationCircleOutlined } from '@ant-design/icons';
 const { confirm} = Modal;
 function Customers() {
 
-
+    // tamam değil mi şu an
+    // tamadır cok sağol 
+    // bu şekilde CORS verirse hata olarak;
+    // 1- Package.json'a girelim ve proxy'olarak url'i yazalım
+    // 2- Axios ile çekme işlemi yaparken, package.json daki proxy'ye eklediğimiz adresin devamı olarak yazalım.
+    // Not : Bak izle beni şimdi.
 
     const [customers, setcustomers] = useState([]);
     const [loading, setloading] = useState(true)
@@ -18,7 +23,9 @@ function Customers() {
     }, []);
 
     const getCustomers = () => {
-        axios.get('https://northwind.vercel.app/api/customers')
+        // https://northwind.vercel.app/api /customers
+    
+        axios.get('/customers')
             .then(res => {
                 setcustomers(res.data)
                 setloading(false)

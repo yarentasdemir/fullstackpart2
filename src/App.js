@@ -12,6 +12,15 @@ import Cart from "./contextSample/Cart";
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import Customers from "./components/Customers";
+import AddCustomer from "./components/AddCustomer";
+import AddProduct from "./components/AddProduct";
+import AddSupplierWithFormik from "./components/AddSupplierWithFormik ";
+
+
+
+
+
+
 
 
 
@@ -26,6 +35,11 @@ function App() {
   { label:<Link to='/'> Home</Link>, key: '1' }, 
   { label:<Link to='/customers'> Customers</Link>, key: '2' }, 
   { label:<Link to='/customers'> Products</Link>, key: '3' }, 
+  { label:<Link to='/addcustomer'> Add Customer</Link>, key: '4' }, 
+  { label:<Link to='/addproduct'> Add Product</Link>, key: '5' }, 
+  { label:<Link to='/addsupplierwithformik'> Add AddSupplierWithFormik</Link>, key: '5' }, 
+  
+  
  
   ];
    
@@ -46,6 +60,7 @@ function App() {
       <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
       <Routes>
       <Route path ="/" element= {<HomePage/>}></Route>
+      <Route path ="/addcustomer" element= {<AddCustomer/>}></Route>
       <Route path ="/about" element= {<AboutPage/>}></Route>
       <Route path ="/contact" element= {<ContactPage/>}></Route>
       <Route path ="/categories" element= {<CategoryPage/>}></Route>
@@ -53,6 +68,11 @@ function App() {
       <Route path ="/products" element= {<Products/>}></Route>
       <Route path ="/cart" element= {<Cart/>}></Route>
       <Route path ="/customers" element= {<Customers/>}></Route>
+      <Route path ="/addproduct" element= {<AddProduct/>}></Route>
+      <Route path ="/addsupplierwithformik" element= {<AddSupplierWithFormik/>}></Route>
+     
+     
+
       
 
        </Routes>
